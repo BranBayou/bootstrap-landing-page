@@ -2,3 +2,11 @@
     width: 80%;
 }
 
+.card-div {
+    transition: all .3s;
+}
+
+.card-div:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
