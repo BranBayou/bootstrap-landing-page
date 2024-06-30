@@ -2,6 +2,30 @@
     width: 80%;
 }
 
+/* Menu hover effect */
+.nav-item {
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+  }
+
+  .nav-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #4caf4f;
+    transition: width 0.3s ease-in-out;
+  }
+
+  .nav-item:hover::after {
+    width: 100%;
+  }
+
+/* Card hover effect */
 .card-div {
     transition: all .3s;
 }
@@ -10,3 +34,4 @@
     transform: scale(1.1);
     cursor: pointer;
 }
+
