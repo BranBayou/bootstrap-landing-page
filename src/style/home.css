@@ -6,6 +6,14 @@
     width: 40%;
 }
 
+.custum-bg-green {
+    background-color: #4caf4f;
+}
+
+.custum-green {
+    color: #4caf4f;
+}
+
 /* Menu hover effect */
 .nav-item {
     position: relative;
