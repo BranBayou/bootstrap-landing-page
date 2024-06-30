@@ -295,7 +295,7 @@
     <div class="overlay d-none position-absolute top-0 start-0 w-100 h-100 z-2" style="background-color: rgba(0, 0, 0, 0.5);"></div>
 
     <!-- LOGIN SECTION START -->
-    <section class="d-none w-40 mx-auto tab-pane fade show active py-4 px-3 border rounded shadow" id="login" role="tabpanel" aria-labelledby="login-tab">
+    <section id="login-popup" class="d-none position-fixed top-50 start-50 translate-middle z-3 w-40 mx-auto tab-pane fade show active bg-white py-4 px-3 border rounded shadow" role="tabpanel" aria-labelledby="login-tab">
       <form>
         <div>
           <h1 class="fw-bold py-4">Login</h1>
@@ -314,7 +314,7 @@
     <!-- LOGIN SECTION END -->
 
     <!-- SIGNUP SECTION START -->
-    <section class="d-none w-40 mx-auto tab-pane fade show active py-4 px-3 border rounded shadow" id="signup" role="tabpanel" aria-labelledby="signup-tab">
+    <section id="signup-popup" class="d-none position-fixed top-50 start-50 translate-middle z-3 w-40 mx-auto tab-pane fade show active bg-white py-4 px-3 border rounded shadow" role="tabpanel" aria-labelledby="signup-tab">
       <form>
         <div>
           <h1 class="fw-bold py-4">Sign up</h1>
@@ -343,6 +343,16 @@
       $(document).ready(function() {
         $('#login').on('click', function() {
           $('.overlay').removeClass('d-none');
+          $('#login-popup').removeClass('d-none');
+        })
+        $('#signup').on('click', function() {
+          $('.overlay').removeClass('d-none');
+          $('#signup-popup').removeClass('d-none');
+        })
+        $('.overlay').on('click', function() {
+          $('.overlay').addClass('d-none');
+          $('#signup-popup').addClass('d-none');
+          $('#login-popup').addClass('d-none');
         })
       });
     </script>
