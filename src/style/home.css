@@ -2,6 +2,10 @@
     width: 80%;
 }
 
+.w-40 {
+    width: 40%;
+}
+
 /* Menu hover effect */
 .nav-item {
     position: relative;
